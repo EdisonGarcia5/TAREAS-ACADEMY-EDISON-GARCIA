@@ -15,6 +15,7 @@ CREATE TABLE administrador(
     -- nuevos atributos agregados 
     numero_telefono VARCHAR(20), --para almacenar el número de teléfono del administrador.
     direccion VARCHAR(100) -- Incluir un campo para almacenar la dirección del administrador.
+    --
     fecha_creacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
@@ -47,6 +48,7 @@ CREATE TABLE marca(
     nombre_marca VARCHAR(50),
     -- nuevos atributos agregados 
     categoria VARCHAR(50) -- es la categoría a la que pertenece la marca ya sea electrónicos, producto de limpiesa, etc.
+    --
     fecha_creacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
@@ -109,6 +111,7 @@ CREATE TABLE venta(
     -- nuevos atributos agregados 
     metodo_pago VARCHAR(50), -- el método de pago utilizado en la venta.
     estado_venta VARCHAR(50), -- el estado actual de la venta, por ejemplo, pendiente, pagada, entregada, etc.
+    --
     FOREIGN KEY(id_vendedor) REFERENCES vendedor(id_vendedor),
     FOREIGN KEY(id_cliente) REFERENCES cliente(id_cliente),
     FOREIGN KEY(id_producto) REFERENCES producto(id_producto)
