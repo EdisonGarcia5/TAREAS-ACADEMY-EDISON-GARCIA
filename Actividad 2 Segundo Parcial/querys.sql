@@ -1,15 +1,15 @@
 
 --Tabla cliente completada todos los campos.
 
-SELECT
+SELECT 
     cliente.id_cliente,
-    cliente.nombre_cliente,
-    cliente.app_cliente,
-    cliente.apm_cliente,
-    cliente.correo_electronico,
-    cliente.contrasena,
-    cliente.telefono,
-    cliente.fecha_creacion,
+    cliente.nombre_cliente, 
+    cliente.app_cliente, 
+    cliente.apm_cliente, 
+    cliente.correo_electronico, 
+    cliente.contrasena, 
+    cliente.telefono, 
+    cliente.fecha_creacion, 
     estatus.nombre_estatus
 FROM cliente
 INNER JOIN estatus ON cliente.id_estatus = estatus.id_estatus
